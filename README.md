@@ -3,6 +3,18 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 inside this project i build task tracker application with react js, using some basic react hooks like useState and use Effect. This task-tracker will save all tasks and update to local storage and will add some cool css animations to make this app more interactive.
 
+To create a React JS application, we can use a tool called "create-react-app." This tool will create a basic React project with all the necessary files and configurations to get you started. Here are the steps to create a new React JS application:
+
+1.Open your terminal and navigate to the directory where you want to create your React application.
+2.Run the following command to create a new React app:  npx create-react-app my-app task
+3.Once the command completes, navigate into the new project directory: cd task
+4. Now you can start the development server by running: npm start
+
+This will start a local development server at http://localhost:3000. You can now begin building your React application!
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
