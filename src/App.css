@@ -1,51 +1,110 @@
+
 body{
-    background-color: #17181f;
     color: #ddd;
+    background: url(https://cdn.wallpapersafari.com/30/0/72Pzwb.jpg);
 }
+
+
+
+
+.card {
+
+    width: 37.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  }
+  .card:before, .card:after {
+	content: '';
+	position: absolute;
+	left: -0.125rem;
+	top: -0.125rem;
+	background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+		#0000ff, #00ff00,#ffff00, #ff0000);
+	background-size: 400%;
+	width: calc(100% + 0.25rem);
+	height: calc(100% + 0.25rem);
+	z-index: -1;
+	animation: steam 20s linear infinite;
+}
+
+
+@keyframes steam {
+	0% {
+		background-position: 0 0;
+	}
+	50% {
+		background-position: 400% 0;
+	}
+	100% {
+		background-position: 0 0;
+	}
+}
+
+.card:after {
+	filter: blur(3.125rem);
+}
+
+  .todo{
+    width: 100%;
+    background: rgba(235, 164, 224, 0.75);
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+  }
+  
+
+
 *{
     box-sizing: border-box;
 }
 main{
-    max-width: 300px;
-    margin: 20px auto;
+    max-width: 31.25rem;
+    margin:0.625rem auto;
 }
 form{
-    border: 3px solid #30313D;
-    border-radius: 10px;
-    padding: 5px;
+    border: 0.0625rem solid #30313D;
+    border-radius: 0.625rem;
+    padding: 0.9375rem;
     display:flex;
+    justify-content: center;
+    align-items: center;
 }
 form input[type="text"] {
     background: none;
     color:#fff;
     border:0;
-    padding: 0 8px;
+    padding: 0 0.9375rem;
     display:block;
     width: 100%;
 }
 form button{
-    background-color: #61DAFB;
-    border:0;
-    border-radius: 6px;
+    background-color: white;
+    border:3.125rem;
+    border-radius: 2.25rem;
     cursor:pointer;
 }
 
 div.task{
-    background-color: #30313D;
-    border-radius: 10px;
-    padding: 5px 9px;
-    margin-top: 5px;
+    background-color: black;
+    border-radius: 0.75rem;
+    padding: 0.4375rem 0.75rem;
+    margin-top: 0.3125rem;
     display:flex;
     align-items: center;
     transition: opacity .3s linear;
 }
 div.task svg{
-    height: 20px;
-    margin-right: 6px;
+    height: 1.25rem;
+    margin-right: 0.375rem;
     fill: #61DAFB;
 }
 div.task.done{
-    opacity: 0.3;
+    opacity: 0.8;
 }
 div.task-name, div.task form{
     flex-grow:1;
@@ -57,10 +116,10 @@ div.task span:before{
     content:'';
     display:block;
     width:0;
-    height:1px;
+    height:0.0625rem;
     background-color: #ddd;
     position:absolute;
-    top: 10px;
+    top: 0.625rem;
     transition: width .1s linear;
 }
 div.task.done span:before{
@@ -84,10 +143,63 @@ button.trash{
 }
 button.trash svg{
     fill: #888;
-    height: 14px;
+    height: 0.875rem;
 }
 div.task input{
-    border: 2px solid #555;
-    border-radius:5px;
-    padding: 2px 4px;
+    border: 0.1875rem solid #555;
+    border-radius:0.3125rem;
+    padding: 0.125rem 0.25rem;
+}
+ 
+  .footer {
+    animation: slide 30s linear infinite;
+    color: black;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+  
+  .input1{
+    width: 100%;
+    height: 2.5rem;
+    background-color: white;
+    border: none;
+    border-radius: 0.3125rem;
+    padding: 0 5rem 0 0.625rem;
+    outline: none;
+  }
+  .btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6rem;
+    height: 4.35rem;
+    font-size: 1.125rem;
+    border-radius: 0.3125rem;
+    border: none;
+    color: white;
+    background-color: black;
+    cursor: pointer;
+  }
+
+  .box{
+    position: relative;
+    width: 100%;
+  }
+.heading{
+    color: black;
+
+    width: 100%;
+    text-align: center;
+
+
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 1.5625rem;
 }

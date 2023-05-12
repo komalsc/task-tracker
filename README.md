@@ -1,6 +1,7 @@
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+inside this project i build task tracker application with react js, using some basic react hooks like useState and use Effect. This task-tracker will save all tasks and update to local storage and will add some cool css animations to make this app more interactive.
 
 ## Available Scripts
 

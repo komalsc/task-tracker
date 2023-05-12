@@ -3,6 +3,8 @@ import TaskForm from "./TaskForm";
 import Task from "./Task";
 import {useEffect, useState} from "react";
 
+import {  Row, Col, Container } from "react-bootstrap";
+
 function App() {
   const [tasks,setTasks] = useState([]);
 
@@ -59,9 +61,15 @@ function App() {
   }
 
   return (
+    <div className='card'>
+    <div className='todo'>
     <main>
-      <h1>{numberComplete}/{numberTotal} Complete</h1>
-      <h2>{getMessage()}</h2>
+    <Container>
+      <Row>
+        <Col xs={12} sm={6} md={4}>
+    <h1 className='heading'>TASK TRACKER APPLICATION</h1>
+      <h1 className='heading'>{numberComplete}/{numberTotal} Complete</h1>
+      <h2 className='heading'>{getMessage()}</h2>
       <TaskForm onAdd={addTask} />
       {tasks.map((task,index) => (
         <Task {...task}
@@ -69,7 +77,13 @@ function App() {
               onTrash={() => removeTask(index)}
               onToggle={done => updateTaskDone(index, done)} />
       ))}
+      <h1 className='footer'>write your task and complete it</h1>
+      </Col>
+      </Row>
+    </Container>
     </main>
+    </div>
+    </div>
   );
 }
 
